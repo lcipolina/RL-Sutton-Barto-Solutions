@@ -66,6 +66,8 @@ blah blah
 
 * **Value function methods** allow individual states to be evaluated and updated as we play.
 
+---
+
 ### Temporal difference learning method
 * These are methods used to estimate value functions.
 
@@ -89,14 +91,33 @@ blah blah
 
   [comment]: <> (use URL coding to escape catacters such as '+' =  %2B)
   
-   <img src="https://render.githubusercontent.com/render/math?math=\text{Value of state (now)} = \text{Value of State (previous)}%2B\text{correction from new info}">
+  
+   <img src="https://render.githubusercontent.com/render/math?math=\text{Updated Value of state (previous)} = \text{Value of State (previous)}%2B\text{correction from new info}">
    
   
   * The *correction* term is called *the TD error* and represents by how much we want to update the last value.
   
-     <img src="https://render.githubusercontent.com/render/math?math=\text{TD Error} = \alpha . (\text{Disc Rewards (now)} - \text{Value of State (previous)})">
+     <img src="https://render.githubusercontent.com/render/math?math=\text{TD Error} = \alpha . (\text{Disc Rewards (current)} - \text{Value of State (previous)})">
      
    * alpha (α) term to adjust how much of that error we want to update by.
+   
+   * Note that the error looks one step ahead of the updated value. It is the change in the estimates at two succesive times.
+   
+   * Note that: (t+1) is the *current* time step and time (T) is the *previous* time step, which we are updating.
+   
+ * The TD function is an iterative loop:
+ 
+    <img src="https://render.githubusercontent.com/render/math?math=G_t=R_{t+%2B1}%2B\gamma R_{t+%2B2}%2B\gamma^2R_{t+%2B3}%2B.... = R_{t%2B1}%2B\gamma G_{t%2B1}">
+    
+    and
+    
+     <img src="https://render.githubusercontent.com/render/math?math=v_{\pi}(s)=E_{\pi}[G_t \mid S_t = s]">
+     
+     combining both, we have a recurring function:
+    
+     <img src="https://render.githubusercontent.com/render/math?math=v_{\pi}(s)=E_{\pi}[R_{t%2B1}%2B\gamma G_{t%2B}\mid S_t = s]">
+ 
+     <img src="https://render.githubusercontent.com/render/math?math=v_{\pi}(s)=R_{t%2B}%2B \gamma v_{\pi}(S_{t%2B1})">
   
   
 
