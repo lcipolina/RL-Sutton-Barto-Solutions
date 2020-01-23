@@ -85,12 +85,16 @@ blah blah
   
   
   **Updating the value function estimate at each step:**  
- 
-   <img src="https://render.githubusercontent.com/render/math?math=\text{Value of State (now)} = \text{Value of State (previous)} &plus  \text{correction from new info}$">
+
+
+  [comment]: <> (use URL coding to escape catacters such as '+' =  %2B)
+  
+   <img src="https://render.githubusercontent.com/render/math?math=\text{Value of state (now)} = \text{Value of State (previous)}%2B\text{correction from new info}">
+   
   
   * The *correction* term is called *the TD error* and represents by how much we want to update the last value.
   
-     <img src="https://render.githubusercontent.com/render/math?math=\text{TD Error} = \alpha . (\text{Disc Rewards (now)} - \text{Value of State (previous)})$">
+     <img src="https://render.githubusercontent.com/render/math?math=\text{TD Error} = \alpha . (\text{Disc Rewards (now)} - \text{Value of State (previous)})">
      
    * alpha (α) term to adjust how much of that error we want to update by.
   
