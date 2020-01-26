@@ -48,7 +48,7 @@ blah blah
 
 * A model that mimics the behaviour of the true environment, allowing inferences on how the environment will behave.
 
-<img src="pictures/states_actions.png" width="600">
+<img src="pictures/ch01/states_actions.png" width="600">
  
 
 
