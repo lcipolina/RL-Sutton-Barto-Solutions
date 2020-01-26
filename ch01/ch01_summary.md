@@ -48,8 +48,6 @@ blah blah
 
 * A model that mimics the behaviour of the true environment, allowing inferences on how the environment will behave.
 
-<img src="https://github.com/lcipolina/RL-Sutton-Barto-Solutions/pictures/ch01/states_actions.png" width="600">
-
 <img src="https://github.com/lcipolina/RL-Sutton-Barto-Solutions/blob/master/pictures/ch01/states_actions.png" width="600">
  
 
