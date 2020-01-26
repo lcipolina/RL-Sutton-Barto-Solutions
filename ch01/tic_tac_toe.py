@@ -19,6 +19,20 @@
   # Each cell in this table has a Q-value. 
   # The Q-value tells us whether it is a good idea or not to take the corresponding action from the current state.
   # A high Q-value is good and a low Q-value is bad. Rewards increase the associated Q-values. 
-  # We can also assign a negative reward as a punishment for an action, which reduces the Q-value, and therefore discourages taking that action from that particular state in the future.
+  # We can also assign a negative reward as a punishment for an action, which reduces the Q-value, 
+  # and therefore discourages taking that action from that particular state in the future.
+  
+ #STEPS:
+ #Explore the space
+ #Calculate the Q-learning score for each board
+ #Create a dictionary from board to score
+ #For any given state, our next move will be the max score out of all possible next moves.
+#Build a NN that given a board position, calculates the score.
+
+####################################################################################################################
+
+#Imports
+import random #to call the randint() function.
+
 
 
